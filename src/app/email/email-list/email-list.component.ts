@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InboundEmail } from '../_models/inboundemail';
-import { InboundEmailService } from '../_services/inbound-email.service';
+import { InboundEmail } from '../../_models/inboundemail';
+import { InboundEmailService } from '../../_services/inbound-email.service';
 
 @Component({
   selector: 'app-email-list',
@@ -14,7 +14,11 @@ export class EmailListComponent implements OnInit {
   constructor(public inboundEmailService: InboundEmailService) { }
 
   ngOnInit(): void {
-    this.inboundEmailService.getInboundEmails().then(data => this.inboundEmails = data);
+    this.inboundEmailService.getInboundEmails().then(data => {
+      this.inboundEmails = data
+      console.log(this.inboundEmails);
+    });
+    
   }
 
 }

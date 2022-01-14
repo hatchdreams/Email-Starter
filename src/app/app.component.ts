@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { User } from './_models/user';
 import { UserService } from './_services/user.service';
@@ -11,16 +10,22 @@ import { UserService } from './_services/user.service';
 export class AppComponent {
   title = 'primeng-sandbox';
   users: any;
+  accessMode = false;
 
   constructor(private userService: UserService) {}
 
   ngOnInit() {
     this.setCurrentUser();
+    this.accessToggle();
   }
 
   setCurrentUser() {
     const user: User = JSON.parse(localStorage.getItem('user'));
     this.userService.setCurrentUser(user);
+  }
+
+  accessToggle() {
+    this.accessMode = !this.accessMode
   }
 
 }

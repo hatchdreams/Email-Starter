@@ -1,0 +1,11 @@
+<button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success p-button-outlined"></button>
+<h1>Inbox</h1>
+<p-table [value]="inboundEmails" styleClass="p-datatable-lg" [scrollable]="true" scrollHeight="80vh"> 
+    <ng-template pTemplate="body" let-inboundEmail>
+        <tr>
+            <td style="text-align:right"><p-badge value="{{inboundEmail.fromName | uppercase | slice:0:1 }} " size="large" severity="secondary"></p-badge></td>
+            <td style="text-align:left">{{inboundEmail.fromName}}<br>{{inboundEmail.subject}}</td>
+            <td>{{inboundEmail.date | date: 'M/d h:mm a'}}</td>
+        </tr>
+    </ng-template>
+</p-table>

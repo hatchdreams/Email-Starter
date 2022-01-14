@@ -23,7 +23,7 @@ export class EmailMainComponent implements OnInit {
   }
 
   getInboundEmails() {
-    this.http.get('https://localhost:5001/api/inboundemails').subscribe(inboundEmails => this.inboundEmails = inboundEmails);
+    //this.http.get('https://localhost:5001/api/inboundemails').subscribe(inboundEmails => this.inboundEmails = inboundEmails);
   }
 
   cancelSendEmail(event: boolean) {
