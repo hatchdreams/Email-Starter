@@ -1,0 +1,3 @@
+<app-email-list></app-email-list>
+<app-selected-email [selectedEmailFromHome]="selectedEmail"></app-selected-email>
+<app-send-email [selectedEmailFromHome]="selectedEmail" (cancelSend)="cancelSendEmail($event)"></app-send-email>

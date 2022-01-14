@@ -1,0 +1,51 @@
+{
+    "data":[
+        {
+            "to":"ashley.mcdonald@gmail.com",
+            "from":"thomas.vitale@threatlocker.com",
+            "cc":"",
+            "bcc":"",
+            "date":"2021-04-23T18:25:43.511Z",
+            "body":"<p>This is a test 1 email body.</p>",
+            "isOpened":"false",
+            "isFavorited":"false",
+            "isDeleted":"false"
+        },
+        {
+            "to":"deborah.vitale@gmail.com",
+            "from":"thomas.vitale@threatlocker.com",
+            "cc":"",
+            "bcc":"",
+            "date":"2021-04-23T18:25:43.511Z",
+            "body":"<p>This is a test 2 email body.</p>",
+            "isOpened":"false",
+            "isFavorited":"false",
+            "isDeleted":"false"
+        },
+        {
+            "to":"kevin.vitale@gmail.com",
+            "from":"thomas.vitale@threatlocker.com",
+            "cc":"",
+            "bcc":"",
+            "date":"2021-04-23T18:25:43.511Z",
+            "body":"<p>This is a test 3 email body.</p>",
+            "isOpened":"false",
+            "isFavorited":"false",
+            "isDeleted":"false"
+        },
+        {
+            "to":"selena.folsom@gmail.com",
+            "from":"thomas.vitale@threatlocker.com",
+            "cc":"",
+            "bcc":"",
+            "date":"2021-04-23T18:25:43.511Z",
+            "body":"<p>This is a test 4 email body.</p>",
+            "isOpened":"false",
+            "isFavorited":"false",
+            "isDeleted":"false"
+        },
+    ]
+}
+
+    
+  
