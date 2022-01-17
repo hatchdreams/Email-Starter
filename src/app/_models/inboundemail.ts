@@ -1,4 +1,5 @@
 export interface InboundEmail {
+    id: number;
     to: string;
     from: string;
     fromName: string;

@@ -10,6 +10,7 @@ import { InboundEmailService } from '../../_services/inbound-email.service';
 export class EmailListComponent implements OnInit {
 
   inboundEmails: InboundEmail[];
+  selectedEmail: InboundEmail;
 
   constructor(public inboundEmailService: InboundEmailService) { }
 
@@ -19,6 +20,10 @@ export class EmailListComponent implements OnInit {
       console.log(this.inboundEmails);
     });
     
+  }
+
+  onRowSelect(event) {
+    //this.messageService.add({severity:'info', summary:'Product Selected', detail: event.data.name});
   }
 
 }

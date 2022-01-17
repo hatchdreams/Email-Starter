@@ -1,13 +1,9 @@
+
 <div style="width:40em">
-    <button pButton pRipple type="button" icon="pi pi-file" class="p-button-rounded p-button-outlined"></button>
-    <button pButton pRipple type="button" icon="pi pi-download" class="p-button-rounded p-button-secondary p-button-outlined"></button>
-    <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-success p-button-outlined"></button>
-    <button pButton pRipple type="button" icon="pi pi-arrow-left" class="p-button-rounded p-button-info p-button-outlined"></button>
-    <button pButton pRipple type="button" icon="pi pi-arrow-right" class="p-button-rounded p-button-warning p-button-outlined"></button>
-    <app-email-list></app-email-list>
+
 </div>
 <div>
-    <app-selected-email [selectedEmailFromHome]="selectedEmail"></app-selected-email>
+    
 </div>
 
 <app-send-email [selectedEmailFromHome]="selectedEmail" (cancelSend)="cancelSendEmail($event)"></app-send-email>

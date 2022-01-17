@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'primeng-sandbox';
   users: any;
   accessMode = false;
+  activeTab: number = 0;
 
   constructor(private userService: UserService) {}
 

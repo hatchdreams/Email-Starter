@@ -1,5 +1,4 @@
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component'
 import { SelectedEmailComponent } from './email/selected-email/selected-email.component';
 import { EmailMainComponent } from './email/email-main/email-main.component';
 import { EmailListComponent } from './email/email-list/email-list.component';
@@ -13,19 +12,19 @@ import { HttpClientModule } from  '@angular/common/http';
 import { BadgeModule } from 'primeng/badge';
 
 import { ButtonModule } from 'primeng/button';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { TableModule } from 'primeng/table';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuModule } from 'primeng/menu';
-
+import { CheckboxModule } from 'primeng/checkbox';
+import { StyleClassModule } from 'primeng/styleclass';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
     EmailMainComponent,
     EmailListComponent,
     SelectedEmailComponent,
@@ -38,13 +37,15 @@ import { MenuModule } from 'primeng/menu';
     BrowserAnimationsModule,
     ButtonModule,
     CardModule,
+    CheckboxModule,
     FormsModule,
     HttpClientModule,
     InputTextModule,
     InputTextareaModule,
     MenubarModule,
+    StyleClassModule,
     TableModule,
-    MenuModule
+    MenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
