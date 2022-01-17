@@ -32,7 +32,7 @@
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a pRipple class="flex align-items-center cursor-pointer p-3 lg:justify-content-center hover:bg-bluegray-600 border-round text-bluegray-100 hover:text-bluegray-50 transition-duration-150 transition-colors" (click)="activeTab = 4"
+                            <a pRipple class="flex align-items-center cursor-pointer p-3 lg:justify-content-center hover:bg-bluegray-600 border-round text-bluegray-100 hover:text-bluegray-50 transition-duration-150 transition-colors" (click)="showPositionDialog('bottom-right')"
                                 [ngClass]="{'bg-bluegray-900': activeTab === 4}">
                                 <i class="pi pi-plus text-lg"></i>
                             </a>
@@ -68,7 +68,7 @@
                     </div>
                     <span class="p-input-icon-left">
                         <i class="pi pi-search"></i>
-                        <input type="text" pInputText class="w-10rem sm:w-20rem" placeholder="Search">
+                        <input type="text" pInputText placeholder="Search">
                     </span>
                 </div>
                 <app-email-list></app-email-list>
@@ -87,14 +87,14 @@
                 surface-section border-1 lg:border-none surface-border right-0 top-100 z-1 shadow-2 lg:shadow-none absolute lg:static">
                 <li>
                     <a pRipple class="flex p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer
-                        transition-duration-150 transition-colors">
+                        transition-duration-150 transition-colors" (click)="showPositionDialog('bottom-right')">
                         <i class="pi pi-arrow-left text-base lg:text-2xl mr-2 lg:mr-0"></i>
                         <span class="block lg:hidden font-medium">Reply</span>
                     </a>
                 </li>
                 <li>
                     <a pRipple class="flex p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer
-                        transition-duration-150 transition-colors">
+                        transition-duration-150 transition-colors" (click)="showPositionDialog('bottom-right')">
                         <i class="pi pi-arrow-right text-base lg:text-2xl mr-2 lg:mr-0"></i>
                         <span class="block lg:hidden font-medium">Forward</span>
                     </a>
@@ -123,8 +123,34 @@
         </div>
     </div>
 </div>
+<p-dialog header="Send New Email" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '35vw'}"
+    [draggable]="false" [resizable]="false">
+    <div class="p-fluid">
+        <div class="p-field mb-2">
+            <label for="toEmail">To:</label>
+            <input id="toEmail" type="text" pInputText> 
+        </div>
+        <div class="p-field mb-2">
+            <label for="ccEmail">CC:</label>
+            <input id="ccEmail" type="text" pInputText> 
+        </div>
+        <div class="p-field mb-2">
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" pInputText> 
+        </div>
+        <div class="p-field mb-2">
+            <label for="messageBody">Message Body</label>
+            <p-editor [(ngModel)]="messageBody" [style]="{'height':'320px'}"></p-editor> 
+        </div>
+    </div>
+    <ng-template pTemplate="footer">
+        <div>
+            <button pButton pRipple icon="pi pi-times" (click)="displayPosition = false" label="Cancel" class="p-button-text"></button>
+            <button pButton pRipple icon="pi pi-send" (click)="displayPosition = false" label="Send"></button>
+        </div>
+    </ng-template>
+</p-dialog>
+
 
 <h1 *ngIf="!accessMode">Access Denied</h1>
-<div class="container" style="margin-top: 10px">
-<app-email-main></app-email-main>
-</div>
+

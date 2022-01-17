@@ -13,6 +13,10 @@ export class AppComponent {
   accessMode = false;
   activeTab: number = 0;
 
+  displayPosition: boolean;
+  position: string;
+  messageBody: string;
+
   constructor(private userService: UserService) {}
 
   ngOnInit() {
@@ -28,5 +32,10 @@ export class AppComponent {
   accessToggle() {
     this.accessMode = !this.accessMode
   }
+
+  showPositionDialog(position: string) {
+    this.position = position;
+    this.displayPosition = true;
+}
 
 }

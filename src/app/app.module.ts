@@ -21,6 +21,8 @@ import { MenubarModule } from 'primeng/menubar';
 import { MenuModule } from 'primeng/menu';
 import { CheckboxModule } from 'primeng/checkbox';
 import { StyleClassModule } from 'primeng/styleclass';
+import { DialogModule } from 'primeng/dialog';
+import { EditorModule } from 'primeng/editor';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { StyleClassModule } from 'primeng/styleclass';
     ButtonModule,
     CardModule,
     CheckboxModule,
+    DialogModule,
+    EditorModule,
     FormsModule,
     HttpClientModule,
     InputTextModule,
